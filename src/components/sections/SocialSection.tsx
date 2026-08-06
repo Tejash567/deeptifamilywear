@@ -1,21 +1,18 @@
 import { ArrowUpRight, Facebook, Instagram } from "lucide-react";
 
-import catKids from "@/assets/cat-kids.jpg";
-import catMen from "@/assets/cat-men.jpg";
-import catUniforms from "@/assets/cat-uniforms.jpg";
-import catWomen from "@/assets/cat-women.jpg";
-import heroImage from "@/assets/hero-showroom.jpg";
+import { SmartImage } from "@/components/images/SmartImage";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
+import { socialTiles } from "@/config/images";
 import { site } from "@/lib/site";
 
 /**
  * Social section.
- * Instagram's public API needs an app review, so this is a curated grid of
- * store photos that links straight to the profile — swap the images for real
- * post screenshots any time.
+ * Instagram's public API needs an app review, so this grid gracefully falls
+ * back to curated store photos (from the central image configuration) and links
+ * straight to the profile. Swap in real post screenshots any time.
  */
-const instaTiles = [heroImage, catWomen, catMen, catKids, catUniforms, heroImage];
+
 
 export function SocialSection() {
   return (
