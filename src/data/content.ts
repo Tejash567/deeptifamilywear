@@ -1,15 +1,13 @@
 /** Static content for categories, collections, reasons and reviews. */
 
-import catMen from "@/assets/cat-men.jpg";
-import catWomen from "@/assets/cat-women.jpg";
-import catKids from "@/assets/cat-kids.jpg";
-import catUniforms from "@/assets/cat-uniforms.jpg";
+import { images, type ImageEntry } from "@/config/images";
 
 export type Category = {
   slug: string;
   title: string;
   description: string;
-  image: string;
+  /** Image entry from the central image configuration. */
+  image: ImageEntry;
   keywords: string[];
 };
 
@@ -19,7 +17,7 @@ export const categories: Category[] = [
     title: "Men's Wear",
     description:
       "Shirts, trousers, kurtas, t-shirts and jeans — everyday comfort and occasion-ready pieces in a wide range of sizes.",
-    image: catMen,
+    image: images.mens,
     keywords: ["men", "shirt", "trouser", "kurta", "jeans", "formal", "casual"],
   },
   {
@@ -27,7 +25,7 @@ export const categories: Category[] = [
     title: "Women's Wear",
     description:
       "Suits, sarees, kurtis, dupattas and daily wear in fresh designs, soft fabrics and colours chosen for every season.",
-    image: catWomen,
+    image: images.womens,
     keywords: ["women", "saree", "suit", "kurti", "ethnic", "festive"],
   },
   {
@@ -35,7 +33,7 @@ export const categories: Category[] = [
     title: "Kids' Wear",
     description:
       "Cheerful, comfortable clothing for babies, toddlers and school-going children — playful prints and durable stitching.",
-    image: catKids,
+    image: images.kids,
     keywords: ["kids", "children", "baby", "frock", "boys", "girls"],
   },
   {
@@ -43,7 +41,7 @@ export const categories: Category[] = [
     title: "School Uniforms",
     description:
       "Complete uniform sets — shirts, trousers, pinafores, skirts, belts, ties and socks — neatly stocked in all sizes.",
-    image: catUniforms,
+    image: images.uniforms,
     keywords: ["school", "uniform", "shirt", "tie", "belt", "socks", "students"],
   },
 ];
@@ -51,8 +49,9 @@ export const categories: Category[] = [
 export type Collection = {
   title: string;
   description: string;
-  image: string;
+  image: ImageEntry;
 };
+
 
 /** Featured collections — images reuse category photography as placeholders. */
 export const collections: Collection[] = [
