@@ -1,21 +1,18 @@
 import { ArrowUpRight, Facebook, Instagram } from "lucide-react";
 
-import catKids from "@/assets/cat-kids.jpg";
-import catMen from "@/assets/cat-men.jpg";
-import catUniforms from "@/assets/cat-uniforms.jpg";
-import catWomen from "@/assets/cat-women.jpg";
-import heroImage from "@/assets/hero-showroom.jpg";
+import { SmartImage } from "@/components/images/SmartImage";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
+import { socialTiles } from "@/config/images";
 import { site } from "@/lib/site";
 
 /**
  * Social section.
- * Instagram's public API needs an app review, so this is a curated grid of
- * store photos that links straight to the profile — swap the images for real
- * post screenshots any time.
+ * Instagram's public API needs an app review, so this grid gracefully falls
+ * back to curated store photos (from the central image configuration) and links
+ * straight to the profile. Swap in real post screenshots any time.
  */
-const instaTiles = [heroImage, catWomen, catMen, catKids, catUniforms, heroImage];
+
 
 export function SocialSection() {
   return (
@@ -43,19 +40,18 @@ export function SocialSection() {
               </div>
 
               <div className="mt-6 grid grid-cols-3 gap-3">
-                {instaTiles.map((src, i) => (
+                {socialTiles.map((tile) => (
                   <a
-                    key={i}
+                    key={tile.src}
                     href={site.instagram}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="group relative overflow-hidden rounded-2xl"
                   >
-                    <img
-                      src={src}
-                      alt="Clothing on display at Deepti Family Wears"
-                      loading="lazy"
-                      className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    <SmartImage
+                      src={tile.src}
+                      alt={tile.alt}
+                      aspect="aspect-square"
                     />
                     <span className="absolute inset-0 grid place-items-center bg-primary/45 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                       <Instagram className="h-5 w-5 text-primary-foreground" />
@@ -63,6 +59,7 @@ export function SocialSection() {
                   </a>
                 ))}
               </div>
+
 
               <a
                 href={site.instagram}

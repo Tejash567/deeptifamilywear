@@ -1,9 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 
+import { CategoryImage } from "@/components/images/SmartImage";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { categories } from "@/data/content";
+
 
 /** Four premium category cards: image, short description, explore button. */
 export function CategoryGrid({ heading = true }: { heading?: boolean }) {
@@ -25,20 +27,14 @@ export function CategoryGrid({ heading = true }: { heading?: boolean }) {
                 id={category.slug}
                 className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-lift"
               >
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={`${category.title} on display at Deepti Family Wears`}
-                    loading="lazy"
-                    width={1024}
-                    height={1280}
-                    className="h-full w-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.06]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/55 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
+                <div className="relative">
+                  <CategoryImage src={category.image.src} alt={category.image.alt} />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-95" />
                   <h3 className="absolute bottom-4 left-5 font-display text-xl font-semibold text-primary-foreground">
                     {category.title}
                   </h3>
                 </div>
+
 
                 <div className="flex flex-1 flex-col p-5">
                   <p className="text-sm leading-relaxed text-muted-foreground">
