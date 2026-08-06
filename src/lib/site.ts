@@ -1,14 +1,11 @@
 /**
  * Single source of truth for all store information.
  * Update the values here and the whole website stays in sync.
- *
- * NOTE: phone/WhatsApp number below is a placeholder — replace it with the
- * real shop number (digits only, with country code) before publishing.
  */
 
-export const PHONE_DISPLAY = "+91 90000 00000";
-export const PHONE_E164 = "+919000000000"; // used by tel: links
-export const WHATSAPP_NUMBER = "919000000000"; // used by wa.me links
+export const PHONE_DISPLAY = "+91 84106 80476";
+export const PHONE_E164 = "+918410680476"; // used by tel: links
+export const WHATSAPP_NUMBER = "918410680476"; // used by wa.me links
 
 export const site = {
   name: "Deepti Family Wears",
