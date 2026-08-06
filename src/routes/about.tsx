@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Handshake, MapPin, ShieldCheck, Tag } from "lucide-react";
 
-import heroImage from "@/assets/hero-showroom.jpg";
+import { SmartImage } from "@/components/images/SmartImage";
+import { images } from "@/config/images";
+
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";

@@ -2,23 +2,26 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Phone, Star } from "lucide-react";
 
-import heroImage from "@/assets/hero-showroom.jpg";
+import { HeroImage } from "@/components/images/SmartImage";
+import { images } from "@/config/images";
 import { site } from "@/lib/site";
 
-/** Home hero: showroom image, dark overlay, headline and three CTAs. */
+/** Home hero: real storefront photo, dark overlay, headline and three CTAs. */
 export function Hero() {
   return (
     <section className="relative flex min-h-[92svh] items-center overflow-hidden">
-      {/* Background image + navy overlay for text contrast */}
-      <img
-        src={heroImage}
-        alt="Interior of a premium clothing showroom with neatly arranged garments"
-        width={1920}
-        height={1088}
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+      {/* Background photo + charcoal overlay so the text stays readable */}
+      <div className="absolute inset-0">
+        <HeroImage
+          src={images.storefront.src}
+          alt={images.storefront.alt}
+          aspect="h-full w-full"
+          className="h-full w-full"
+        />
+      </div>
       <div className="absolute inset-0 bg-primary/75" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-primary/40" />
+
 
       <div className="relative mx-auto w-full max-w-7xl px-4 pb-28 pt-32 sm:px-6 lg:pb-32">
         <motion.div
