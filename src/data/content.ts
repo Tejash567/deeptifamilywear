@@ -53,39 +53,40 @@ export type Collection = {
 };
 
 
-/** Featured collections — images reuse category photography as placeholders. */
+/** Featured collections — photography is reused from the image configuration. */
 export const collections: Collection[] = [
   {
     title: "Casual Wear",
     description: "Relaxed everyday pieces that stay comfortable all day long.",
-    image: catMen,
+    image: images.mens,
   },
   {
     title: "Festive Collection",
     description: "Rich colours and elegant detailing for weddings and festivals.",
-    image: catWomen,
+    image: images.womens,
   },
   {
     title: "Formal Wear",
     description: "Sharp, well-finished formals for office, interviews and events.",
-    image: catMen,
+    image: images.showroom,
   },
   {
     title: "Daily Essentials",
     description: "Basics the whole family reaches for — simple, sturdy, honest value.",
-    image: catUniforms,
+    image: images.storefront,
   },
   {
     title: "Kids Collection",
     description: "Bright, soft and easy-to-wash outfits for growing children.",
-    image: catKids,
+    image: images.kids,
   },
   {
     title: "School Uniforms",
     description: "Complete, correctly sized uniform sets ready before the term begins.",
-    image: catUniforms,
+    image: images.uniforms,
   },
 ];
+
 
 export const reasons = [
   {
