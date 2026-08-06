@@ -64,16 +64,14 @@ function AboutPage() {
       <section className="bg-background py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16">
           <Reveal>
-            <figure className="overflow-hidden rounded-3xl shadow-soft">
-              <img
-                src={heroImage}
-                alt="Clothing neatly arranged inside Deepti Family Wears"
-                loading="lazy"
-                width={1920}
-                height={1088}
-                className="aspect-[4/3] w-full object-cover"
+            <figure className="group overflow-hidden rounded-3xl shadow-soft">
+              <SmartImage
+                src={images.showroom.src}
+                alt={images.showroom.alt}
+                aspect="aspect-[4/3]"
               />
             </figure>
+
           </Reveal>
 
           <Reveal delay={0.1}>
