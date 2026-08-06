@@ -195,11 +195,12 @@
   color: var(--color-gold);
 }
 
-/* Thin gold divider */
+/* Thin saffron divider under headings */
 @utility gold-rule {
-  height: 1px;
+  height: 2px;
   width: 3.5rem;
-  background: linear-gradient(to right, var(--color-gold), transparent);
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--color-gold), var(--color-highlight), transparent);
 }
 
 /* Frosted panel — used sparingly (hero cards, sticky bars) */
@@ -210,7 +211,8 @@
 }
 
 @utility glass-dark {
-  background: oklch(0.21 0.04 265 / 45%);
+  background: oklch(0.24 0.01 60 / 45%);
   backdrop-filter: blur(14px);
+
   border: 1px solid oklch(1 0 0 / 14%);
 }
