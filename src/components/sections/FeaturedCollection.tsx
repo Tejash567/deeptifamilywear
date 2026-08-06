@@ -1,6 +1,8 @@
+import { SmartImage } from "@/components/images/SmartImage";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { collections } from "@/data/content";
+
 
 /**
  * Featured collection — alternating image/text rows for each collection theme.
@@ -25,16 +27,14 @@ export function FeaturedCollection() {
                 }`}
               >
                 <figure className="group relative overflow-hidden rounded-3xl shadow-soft">
-                  <img
-                    src={item.image}
-                    alt={`${item.title} at Deepti Family Wears, Jhabrera`}
-                    loading="lazy"
-                    width={1024}
-                    height={1280}
-                    className="aspect-[4/3] w-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.05]"
+                  <SmartImage
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    aspect="aspect-[4/3]"
                   />
-                  <div className="absolute inset-0 bg-primary/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 bg-primary/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 </figure>
+
 
                 <div className="max-w-lg">
                   <p className="eyebrow">
