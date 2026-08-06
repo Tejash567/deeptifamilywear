@@ -62,56 +62,61 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --shadow-soft: 0 1px 2px oklch(0.21 0.04 265 / 6%), 0 12px 32px -12px oklch(0.21 0.04 265 / 14%);
-  --shadow-lift: 0 24px 60px -24px oklch(0.21 0.04 265 / 32%);
+  --shadow-soft: 0 1px 2px oklch(0.31 0.03 264 / 6%), 0 12px 32px -12px oklch(0.31 0.03 264 / 14%);
+  --shadow-lift: 0 24px 60px -24px oklch(0.31 0.03 264 / 28%);
 }
 
 :root {
   --radius: 0.875rem;
 
-  --background: oklch(1 0 0); /* white */
-  --foreground: oklch(0.21 0.04 265); /* #0F172A deep navy */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.21 0.04 265);
+  --background: oklch(0.984 0.002 95); /* #FAFAF8 warm white */
+  --foreground: oklch(0.31 0.031 264); /* #1F2937 charcoal */
+  --card: oklch(1 0 0); /* #FFFFFF */
+  --card-foreground: oklch(0.31 0.031 264);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.21 0.04 265);
+  --popover-foreground: oklch(0.31 0.031 264);
 
-  --primary: oklch(0.21 0.04 265); /* deep navy */
-  --primary-foreground: oklch(0.99 0.003 248);
+  /* "primary" is the deep charcoal ink used for photo overlays and dark bands. */
+  --primary: oklch(0.31 0.031 264);
+  --primary-foreground: oklch(0.985 0.002 95);
 
-  --secondary: oklch(0.982 0.002 247); /* #F8F9FA light grey */
-  --secondary-foreground: oklch(0.21 0.04 265);
+  --secondary: oklch(0.965 0.003 95); /* soft warm grey band */
+  --secondary-foreground: oklch(0.31 0.031 264);
 
-  --muted: oklch(0.982 0.002 247);
-  --muted-foreground: oklch(0.52 0.03 258);
+  --muted: oklch(0.965 0.003 95);
+  --muted-foreground: oklch(0.556 0.026 264); /* #6B7280 */
 
-  --accent: oklch(0.742 0.104 85.5); /* #C8A74E elegant gold */
-  --accent-foreground: oklch(0.21 0.04 265);
-  --gold: oklch(0.742 0.104 85.5);
-  --gold-soft: oklch(0.93 0.045 88);
+  /* Bhagwa (saffron) — the signature accent: buttons, icons, links, dividers. */
+  --accent: oklch(0.687 0.156 51); /* #E67E22 */
+  --accent-foreground: oklch(0.99 0.002 95);
+  --gold: oklch(0.687 0.156 51); /* alias kept for existing accent utilities */
+  --gold-hover: oklch(0.575 0.155 45); /* #C85A00 */
+  --gold-soft: oklch(0.945 0.038 68); /* faint saffron wash for icon chips */
+  --highlight: oklch(0.775 0.116 86); /* #D4AF37 gold detailing */
 
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0.003 248);
 
-  --border: oklch(0.925 0.006 258);
-  --input: oklch(0.925 0.006 258);
-  --ring: oklch(0.742 0.104 85.5);
+  --border: oklch(0.917 0.005 264); /* #E5E7EB */
+  --input: oklch(0.917 0.005 264);
+  --ring: oklch(0.687 0.156 51);
 
-  --chart-1: oklch(0.742 0.104 85.5);
-  --chart-2: oklch(0.21 0.04 265);
-  --chart-3: oklch(0.52 0.03 258);
-  --chart-4: oklch(0.93 0.045 88);
-  --chart-5: oklch(0.982 0.002 247);
+  --chart-1: oklch(0.687 0.156 51);
+  --chart-2: oklch(0.31 0.031 264);
+  --chart-3: oklch(0.556 0.026 264);
+  --chart-4: oklch(0.775 0.116 86);
+  --chart-5: oklch(0.965 0.003 95);
 
-  --sidebar: oklch(0.982 0.002 247);
-  --sidebar-foreground: oklch(0.21 0.04 265);
-  --sidebar-primary: oklch(0.21 0.04 265);
-  --sidebar-primary-foreground: oklch(0.99 0.003 248);
-  --sidebar-accent: oklch(0.742 0.104 85.5);
-  --sidebar-accent-foreground: oklch(0.21 0.04 265);
-  --sidebar-border: oklch(0.925 0.006 258);
-  --sidebar-ring: oklch(0.742 0.104 85.5);
+  --sidebar: oklch(0.965 0.003 95);
+  --sidebar-foreground: oklch(0.31 0.031 264);
+  --sidebar-primary: oklch(0.687 0.156 51);
+  --sidebar-primary-foreground: oklch(0.99 0.002 95);
+  --sidebar-accent: oklch(0.945 0.038 68);
+  --sidebar-accent-foreground: oklch(0.31 0.031 264);
+  --sidebar-border: oklch(0.917 0.005 264);
+  --sidebar-ring: oklch(0.687 0.156 51);
 }
+
 
 .dark {
   --background: oklch(0.17 0.032 265);
