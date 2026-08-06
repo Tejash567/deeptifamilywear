@@ -40,19 +40,18 @@ export function SocialSection() {
               </div>
 
               <div className="mt-6 grid grid-cols-3 gap-3">
-                {instaTiles.map((src, i) => (
+                {socialTiles.map((tile) => (
                   <a
-                    key={i}
+                    key={tile.src}
                     href={site.instagram}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="group relative overflow-hidden rounded-2xl"
                   >
-                    <img
-                      src={src}
-                      alt="Clothing on display at Deepti Family Wears"
-                      loading="lazy"
-                      className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    <SmartImage
+                      src={tile.src}
+                      alt={tile.alt}
+                      aspect="aspect-square"
                     />
                     <span className="absolute inset-0 grid place-items-center bg-primary/45 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                       <Instagram className="h-5 w-5 text-primary-foreground" />
@@ -60,6 +59,7 @@ export function SocialSection() {
                   </a>
                 ))}
               </div>
+
 
               <a
                 href={site.instagram}
