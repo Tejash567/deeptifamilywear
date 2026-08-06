@@ -6,9 +6,11 @@
 
 /*
  * Deepti Family Wears — design system
- * Clean luxury: white canvas, deep navy primary, elegant gold accent.
+ * Warm-white canvas, deep charcoal text and Bhagwa (saffron) as the single
+ * signature accent, with a subtle gold highlight for luxury detailing.
  * All colors are oklch tokens; never hardcode colors in components.
  */
+
 
 @theme inline {
   --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
@@ -38,6 +40,8 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
+  --color-highlight: var(--highlight);
+
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
